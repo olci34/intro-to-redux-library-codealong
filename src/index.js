@@ -7,8 +7,9 @@ import shoppingListItemReducer from './reducers/shoppingListItemReducer.js';
 import App from './App';
 import './index.css';
 import { Provider } from 'react-redux';
+import {composeWithDevTools} from 'redux-devtools-extension'
 
-const store = createStore(shoppingListItemReducer)
+const store = createStore(shoppingListItemReducer, composeWithDevTools())
 
 ReactDOM.render(
     <Provider store={store} >
