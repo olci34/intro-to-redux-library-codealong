@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
 	handleOnClick = event => {
+		console.log(this.props)
 		this.props.increaseCount();
 	};
 
@@ -29,7 +30,4 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);
